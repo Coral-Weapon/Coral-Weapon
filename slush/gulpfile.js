@@ -154,15 +154,15 @@ gulp.task('deploy:server', g.serve({
 
 //=======================================================================
 gulp.task('deploy',['dist'], function () {
-  return gulp.src("../review/**/*")
-    .pipe(gulp.dest('../deployed'))
+  return gulp.src('../review/**/*')
+    .pipe(gulp.dest('../deployed'));
 });
 //=======================================================================
 
 //=======================================================================
 gulp.task('review',['dist'], function () {
-  return gulp.src("dist/**/*")
-    .pipe(gulp.dest('../review'))
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest('../review'));
 });
 //=======================================================================
 
@@ -173,7 +173,7 @@ gulp.task('review',['dist'], function () {
  * Watch
  */
 gulp.task('serve', ['watch'], function(){
-  require('./server')
+  require('./server'); 
 });
 gulp.task('watch', ['statics', 'default'], function () {
   isWatching = true;

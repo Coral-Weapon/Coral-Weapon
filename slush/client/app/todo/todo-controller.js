@@ -7,7 +7,7 @@ angular
       .post('http://localhost:8000/api/auth/local', {email:'admin@admin.com', password:'admin'})
       .then(function(data){
         console.log('logged in ', data);
-      })
+      });
 
     $scope.todos = JSON.parse($window.localStorage.getItem('todos') || '[]');
     $scope.$watch('todos', function (newTodos, oldTodos) {
