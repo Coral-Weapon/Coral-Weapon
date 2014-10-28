@@ -1,6 +1,12 @@
-<div class="runningRoute">
-  <div class="info">
-    <!-- <a href="http://localhost:8000/api/runningRoutes/{{ runningRoute.code }}">{{ runningRoute.name }}</a> -->
-    <a href="javascript:loadMap({{ runningRoute.runningRoute }});">{{ runningRoute.name }}</a>
-  </div>
-</div>
+<a href="javascript:loadMap({{ runningRoute.runningRoute }});" class="col-md-11 runningRoute list-group-item">
+  <h4 class="routeName">Route Name:
+   <span>{{ runningRoute.name }}</span>
+   	<small>
+   		<span> | </span> 
+   		<span>Distance: </span> 
+   		<span>{{ (runningRoute.runningRoute.routes[0].legs[0].distance.value)/1000 }}km</span>
+   		<span>Difficulty Lvl: <span>
+   		<span>{{ runningRoute.rating}}</span>
+ 		</small>
+ 	</h4>
+</a>

@@ -1,8 +1,11 @@
 <div id='container'>
 
 </div>
+<h3>Saved Routes:</h3>
 <div class="runningRoutes">
+	<div class="list-group">
     <shortened-running-route running-route="runningRoute" class="fx-zoom-up fx-speed-300 fx-easing-back" ng-repeat="runningRoute in data.runningRoutes | filter:search | orderBy:'created_at'">
     </shortened-running-route>
   <div ui-view></div>
+	</div>
 </div>
